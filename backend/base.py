@@ -1,12 +1,15 @@
-from flask import Flask
+from flask import Flask,jsonify
 
-api = Flask(__name__)
+app = Flask(__name__)
 
-@api.route('/profile')
+@app.route('/profile')
 def my_profile():
-    response_body = {
+    response = jsonify({
         "Name": "Saikat Chakraborty",
         "Qualification" :"BSC CS"
-    }
+        })
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
 
-    return response_body
+if __name__ == '__main__':
+   app.run()
