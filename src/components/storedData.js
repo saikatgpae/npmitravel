@@ -3,11 +3,11 @@ import { useSelector } from 'react-redux'
 
 export default function StoreData(prop) {
   const myState = useSelector((state) => state.reducer);
-  console.log(myState[0])
+  console.log(myState)
   return (
     <div>
       <h1>Welcom to  {prop.company}</h1>
-      <h2>{myState[0].Name}</h2>
+      {/* <h2>Agenda: {myState[0].Agenda}</h2> */}
     </div>
   )
 }

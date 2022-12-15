@@ -7,8 +7,7 @@ var intialState = [];
         intialState.push(response.data)
     }).catch((error) => console.log("error", error))
 
-console.log(intialState);
-    // const intialState = [{name: 'Saikat Chakraborty'}];
+// console.log(intialState);
 
 const reducer = (state = intialState, action) => {
     switch(action.type){
