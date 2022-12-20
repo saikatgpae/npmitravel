@@ -1,9 +1,8 @@
 import axios from "axios";
 
-const API = 'http://127.0.0.1:5000/profile';
+const API = 'http://127.0.0.1:5000/agendas';
 var intialState = [];
-    axios.get(API)
-    .then((response) => {
+    axios.get(API).then((response) => {
         intialState.push(response.data)
     }).catch((error) => console.log("error", error))
 
