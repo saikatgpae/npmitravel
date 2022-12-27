@@ -9,7 +9,7 @@ export default function StoreData(prop) {
   return (
     <div>
       <h1>Welcom to  {prop.company}</h1>
-      {/* <h2>Agenda: {myState[0]}</h2> */}
+      {/* <h2>Agenda: {myState[0].Agendas}</h2> */}
     </div>
   )
 }

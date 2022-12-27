@@ -12,20 +12,20 @@ export default function addProfile() {
     function handlePostQuery(e, query="some data"){
       e.preventDefault();
       console.log("Submitted")
-      const data = { Agenda: 'read MongoDB' };
+      // const data = { Agenda: 'read MongoDB' };
 
-        fetch('http://127.0.0.1:5000/query', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json',},
-        body: JSON.stringify(data),
-        })
-        .then((response) => response.json())
-        .then((data) => {
-        console.log('Success:', data);
-        })
-        .catch((error) => {
-        console.error('Error:', error);
-        });
+        // fetch('http://127.0.0.1:5000/profile', {
+        // method: 'POST',
+        // headers: {'Content-Type': 'application/json',},
+        // body: JSON.stringify(data),
+        // })
+        // .then((response) => response.json())
+        // .then((data) => {
+        // console.log('Success:', data);
+        // })
+        // .catch((error) => {
+        // console.error('Error:', error);
+        // });
         }
   
 
@@ -37,11 +37,11 @@ export default function addProfile() {
         <form>
           <button onClick={handlePostQuery}>Submit</button>
         </form>
-        <form action = "http://127.0.0.1:5000/add" method = "post">
+        {/* <form action = "http://127.0.0.1:5000/add" method = "post">
           <p>Enter an Agenda:</p>
           <p><input type = "text" name = "nm" /></p>
           <p><input type = "submit" value = "submit" /></p>
-        </form>  
+        </form>   */}
     </div>
   )
 }

@@ -12,22 +12,22 @@ with open('data.json', 'r') as myfile:
 @app.route('/agendas', methods=["GET"])
 def my_profile():
     response = jsonify(obj)
-    # response.headers.add('Access-Control-Allow-Origin', '*')
+    response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
-@app.route('/query', methods = ["GET",'POST'])
-def get_query_from_react():
-    return request.data
+# @app.route('/query', methods = ["GET",'POST'])
+# def get_query_from_react():
+#     return request.data
 
 
-@app.route('/add',methods = ['POST', 'GET'])
-def login():
-#    if request.method == 'POST':
-    data = request.form['nm']
-    with open('data.json', 'a') as myfile:
-        myfile.write(str({"agenda": data}))
+# @app.route('/add',methods = ['POST', 'GET'])
+# def login():
+# #    if request.method == 'POST':
+#     data = request.form['nm']
+#     with open('data.json', 'a') as myfile:
+#         myfile.write(str({"agenda": data}))
    
-    return request.form['nm']
+#     return request.form['nm']
 
 
 if __name__ == '__main__':
