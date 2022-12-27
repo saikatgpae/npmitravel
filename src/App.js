@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       {/* <Profile /> */}
-      <StoreData company="GTG Holiday"/>
+      <StoreData company="ITravel"/>
       <AddProfile/>
     </div>
   );
